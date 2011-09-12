@@ -1,5 +1,9 @@
+// Call this a whole bunch of times
 stripCss();
-//document.body.onload = stripCss;
+document.body.onload = function() {
+	window.setTimeout(stripCss,50);
+};
+window.setTimeout(stripCss,50);
 
 function stripCss() {
 	var targetelement='link';
